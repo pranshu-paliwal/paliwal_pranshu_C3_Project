@@ -27,8 +27,8 @@ class ItemTest {
     public void check_price_of_the_items_Added_in_the_cart() {
 
         List<String> item = new ArrayList<>();
-        item.add("Sweet corn soup");
         item.add("Vegetable lasagne");
+        item.add("Sweet corn soup");
         assertEquals(388,restaurant.calculatePrice(item));
 
     }

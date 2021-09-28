@@ -42,7 +42,17 @@ public class Restaurant {
         }
         return null;
     }
-
+    protected int calculatePrice(List<String> item) {
+        int x=0;
+        for (int i = 0; i < getMenu().size(); i++) {
+            for (int j = 0; j < item.size(); j++) {
+                if ((menu.get(i).getName()== item.get(j))) {
+                    x = menu.get(i).getPrice()+x ;
+                }
+            }
+        }
+        return x;
+    }
 
     public void addToMenu(String name, int price) {
         Item newItem = new Item(name,price);
